@@ -1,0 +1,170 @@
+Last login: Tue Apr 18 12:57:36 on ttys000
+grc-denmark:~ mrgiglio$ cd desktop
+grc-denmark:desktop mrgiglio$ cd 338_03_L03_mrgiglio
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .DS_Store
+	new file:   index.html
+
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Add index.html"
+[master (root-commit) 5f3b291] Add index.html
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 index.html
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git log
+commit 5f3b291dfa8d3d44b2fb876b379e7783124349a6
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:04:00 2017 -0700
+
+    Add index.html
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ echo "# Lab-3" >> README.md
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git init
+Reinitialized existing Git repository in /Users/mrgiglio/Desktop/338_03_L03_mrgiglio/.git/
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add README.md
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "first commit"
+[master 6ebd0ee] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git remote add origin https://github.com/gigliom/Lab-3.git
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 813 bytes | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/gigliom/Lab-3.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git remote add origin https://github.com/gigliom/Lab-3.git
+fatal: remote origin already exists.
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push -u origin master
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add -A
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   images/blackgoose.png
+	modified:   index.html
+
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Picture added"
+[master f091357] Picture added
+ 2 files changed, 15 insertions(+)
+ create mode 100755 images/blackgoose.png
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 9.08 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/gigliom/Lab-3.git
+   6ebd0ee..f091357  master -> master
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add -A
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Completed website"
+[master 71f6579] Completed website
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.19 KiB | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gigliom/Lab-3.git
+   f091357..71f6579  master -> master
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add -A
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit "Double check everything is saved"
+error: pathspec 'Double check everything is saved' did not match any file(s) known to git.
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Double check everything is saved"
+[master 13101fa] Double check everything is saved
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gigliom/Lab-3.git
+   71f6579..13101fa  master -> master
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add -A
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Removed p tag from Menu changes line"
+[master eb8eb20] Removed p tag from Menu changes line
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 311 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gigliom/Lab-3.git
+   13101fa..eb8eb20  master -> master
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git add -A
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git commit -m "Final upload"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git push
+Everything up-to-date
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ git log
+commit eb8eb20c848a85527b4a23f25ffa5e96538c9f81
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:40:46 2017 -0700
+
+    Removed p tag from Menu changes line
+
+commit 13101fa96a9dccd023f466bb1812e3babe030e4e
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:37:29 2017 -0700
+
+    Double check everything is saved
+
+commit 71f65790d8c5a9c40a3daaabb96bb4f03f00aab7
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:33:55 2017 -0700
+
+    Completed website
+
+commit f0913578a32d16d6aa93c01e15593299891515dc
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:19:46 2017 -0700
+
+    Picture added
+
+commit 6ebd0eee5a5a18e0ead467fdaa6a0c73eaa3b850
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:07:25 2017 -0700
+
+    first commit
+
+commit 5f3b291dfa8d3d44b2fb876b379e7783124349a6
+Author: Maddy Giglio <madelyngiglio@yahoo.com>
+Date:   Tue Apr 18 13:04:00 2017 -0700
+
+    Add index.html
+grc-denmark:338_03_L03_mrgiglio mrgiglio$ 
